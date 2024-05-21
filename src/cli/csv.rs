@@ -1,8 +1,6 @@
-use std::{fmt, str::FromStr};
-
+use super::verify_file;
 use clap::Parser;
-
-use super::verify_file_exists;
+use std::{fmt, str::FromStr};
 
 #[derive(Debug, Clone, Copy)]
 pub enum OutputFormat {
@@ -11,7 +9,7 @@ pub enum OutputFormat {
 }
 #[derive(Debug, Parser)]
 pub struct CsvOps {
-    #[arg(short, long, default_value = "input.csv",value_parser = verify_file_exists)]
+    #[arg(short, long, default_value = "input.csv",value_parser = verify_file)]
     pub input: String,
 
     #[arg(short, long)] // "output.json".into()

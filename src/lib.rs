@@ -1,8 +1,11 @@
 // 引入模块
 mod cli;
 mod process;
+mod utils;
 
 // 使用 use 导入,
 // 使用 pub 方便外部直接使用
-pub use cli::{Base64Subcommand, Opts, SubCommand};
+pub use cli::{Base64Subcommand, Opts, TextSubCommand};
+pub use cli::{SubCommand, TextSignFormat, TextSignOps, TextVerifyOps};
 pub use process::*;
+pub use utils::*;
