@@ -1,11 +1,16 @@
-### iot
-GET https://iot.xxx.com:4433/jeecg-boot/sys/ng-alain/getDictItemsByTable/'%20from%20sys_user/*,%20'/x.js
+### static file server
+GET http://localhost:8080/tower/fixtures/b64.txt
 
-### getDictItemsByTable
-GET https://iot.xxx.com:4433/jeecg-boot/sys/ng-alain/getDictItemsByTable/'%20from%20sys_user/*,%20'/x.css
+### tower-http-server
+GET http://localhost:8080/tower/fixtures/ed25519.sk
 
-### test index
-GET http://localhost:8080/fixtures/ed25519.sk
+###
+GET http://localhost:8080/tower/fixtures/b64.txt
+Range: bytes=0-100
 
-### test index
-GET http://localhost:8080/fixtures/b64.txt
+
+### tower-http directory
+GET http://localhost:8080/tower/fixtures/
+
+###
+GET http://localhost:8080/fixtures/
